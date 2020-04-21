@@ -1,0 +1,9 @@
+<input #input type='text' class="form-control" placeholder="Szukaj w opisie...">
+
+<ul class="list-group">
+  <li *ngFor="let p of posts$" class="list-group-item">
+    <a href="#" [routerLink]="['/blog/detail/', p.id]">
+      {{p.text}}
+    </a>
+  </li>
+</ul>

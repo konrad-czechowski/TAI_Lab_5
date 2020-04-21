@@ -1,4 +1,18 @@
-<img [src]="image">
-<p>
-  {{ text }}
-</p>
+<div class="wrapper">
+  <div class="card m_card">
+    <div class="card-body">
+      <h4 class="card-title">
+        {{ title }}
+      </h4>
+
+      <img [src]="image" class="card-img">
+
+      <p class="card-text">
+        {{ text }}
+      </p>
+
+      <a class="btn btn-primary btn-lg card-link" [routerLink]="['/blog']" role="button">Back</a>
+    </div>
+  </div>
+
+</div>
