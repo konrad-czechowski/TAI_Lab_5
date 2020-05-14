@@ -1,7 +1,7 @@
 <selectize></selectize>
 <div class="component">
   <div *ngFor="let item of items$ | filter: filterText" class="card m_card">
-    <blog-item [id]="item.id" [image]="item.image" [text]="item.text" [title]="item.title" class="card-body"></blog-item>
+    <blog-item [id]="item.id" [image]="item.url" [text]="item.content" [title]="item.title" class="card-body"></blog-item>
   </div>
 </div>
 
