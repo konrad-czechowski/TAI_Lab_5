@@ -1,7 +1,13 @@
-<nav>
-  <ul class="nav justify-content-center">
+<nav class=" nav justify-content-between">
+  <ul class="nav">
     <li class="nav-item"><a [routerLink]="['/']">Home</a></li>
     <li class="nav-item"><a [routerLink]="['/blog']">Blog</a></li>
     <li class="nav-item"><a [routerLink]="['/contact']">Kontakt</a></li>
   </ul>
+  <ul class="nav">
+    <li class="nav-item"><a [routerLink]="['/login']">Zaloguj się</a></li>
+    <li class="nav-item"><a [routerLink]="['/signup']">Zarejestruj się</a></li>
+    <li class="nav-item"><a [routerLink]="" (click)="logOut()">Wyloguj się</a></li>
+  </ul>
+
 </nav>
