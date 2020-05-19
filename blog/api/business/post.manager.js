@@ -24,6 +24,13 @@ function create(context) {
     }
   }
 
+  async function search(data) {
+    let result = await postDAO.search(data);
+    if (result) {
+      return result;
+    }
+  }
+
   return {
     query: query,
     get: get,
