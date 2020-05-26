@@ -32,6 +32,7 @@ const UserModel = mongoose.model('dp_user', userSchema);
 function createNewOrUpdate(user) {
   return Promise.resolve().then(() => {
     if (!user.id) {
+      user.active = true;
       return new UserModel(user).save().then(result => {
         if (result) {
           return mongoConverter(result);
