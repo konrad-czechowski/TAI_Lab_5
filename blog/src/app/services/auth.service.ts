@@ -7,7 +7,7 @@ import {JwtHelper} from 'angular2-jwt';
 @Injectable()
 export class AuthService {
 
-  private url = 'http://localhost:3000/api';
+  private url = 'http://0.0.0.0:3000/api';
 
   constructor(private http: HttpClient) { }
 
