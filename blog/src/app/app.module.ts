@@ -26,6 +26,8 @@ import {AuthInterceptor} from './services/auth/auth.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import {AuthGuard} from './services/auth.guard';
+import {AuthenticationService} from "./services/authentication.service";
+import {HttpIntercepterBasicAuthService} from "./services/http/interceptor-auth.service";
 
 @NgModule({
   declarations: [
@@ -57,12 +59,13 @@ import {AuthGuard} from './services/auth.guard';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
+      useClass: HttpIntercepterBasicAuthService,
       multi: true
     },
     DataService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

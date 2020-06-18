@@ -1,6 +1,6 @@
 <div class="col-lg-9 col-md-9 col-sm-9">
   <h4>Dodaj post:</h4>
-  <form (ngSubmit)="save()">
+  <form>
     <div class="form-group">
       <label class="col-form-label">Tytuł:</label>
       <input name="title" type="text" class="form-control" placeholder="Wprowadź tytuł" [(ngModel)]="post.title">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="form-group button">
-      <button type="submit" class="btn btn-info">Dodaj</button>
+      <button type="submit" class="btn btn-info" (click)="save()">Dodaj</button>
     </div>
   </form>
 </div>
