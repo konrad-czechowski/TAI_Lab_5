@@ -24,6 +24,7 @@ export class SignupComponent implements OnInit {
     this.authService.createOrUpdate(this.credentials).subscribe((result) => {
       return result;
     });
+    this.router.navigate(['/']);
   }
 
 }
